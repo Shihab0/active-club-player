@@ -2,7 +2,8 @@ import React from 'react';
 import photo from './user.webp'
 
 
-const User = () => {
+const User = (props) => {
+    
     return (
        <div>
              <div className='flex gap-3 items-center m-3'>

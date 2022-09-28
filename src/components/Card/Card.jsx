@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Card = (props) => {
-    console.log(props.user);
+    // console.log(props.user);
+    const {totalWalk} = props;
     const {name, picture, age, time} = props.user;
     return (
             <div className='w-56 p-6 border border-yellow-200 rounded-lg bg-white h-96 relative'>
@@ -11,7 +12,7 @@ const Card = (props) => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, fugiat!</p>
                 <p className=' font-bold'>Age: {age}</p>
                 <p className=' font-bold'>Walk: {time} km</p>
-                <button onClick={() => {}} className='w-11/12 left-3 bg-emerald-600 px-6 py-2 rounded-lg absolute bottom-0 font-bold text-white'>Add To List</button>
+                <button onClick={() => totalWalk(props.user)} className='w-11/12 left-3 bg-emerald-600 px-6 py-2 rounded-lg absolute bottom-0 font-bold text-white'>Add To List</button>
                 </div>
                 </div>     
     );

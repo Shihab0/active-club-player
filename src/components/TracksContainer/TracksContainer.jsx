@@ -10,7 +10,7 @@ import './TracksContainer.css';
 
 const TracksContainer = () => {
     const [data, setData] = useState([]);
-    const [walk, setWalk] = useState(0);
+    const [preUser, setPreUser] = useState([]);
 
     useEffect(data => {
         fetch('fakeData.json')
@@ -18,8 +18,9 @@ const TracksContainer = () => {
         .then(data => setData(data));
     },[]);
 
-    const totalWalk = () => {
-        alert('hi')
+    const totalWalk = (user) => {
+        const newUser = [...preUser, user];
+        setPreUser(newUser);
     }
 
     return (
@@ -28,7 +29,8 @@ const TracksContainer = () => {
             <h3 className='mt-5 mx-5 font-bold'>Select today’s exercise: </h3>
                 <div>
                     <div className='grid grid-cols-3 gap-3 p-5'>
-                       {data.map(user => <Card user={user} totalWalk ={totalWalk}></Card>)}
+                       {data.map(user => <Card user={user}
+                       key={user.id} totalWalk ={totalWalk}></Card>)}
                     </div>
                 </div>
             
@@ -38,6 +40,7 @@ const TracksContainer = () => {
             <div className='bg-white sticky right-0 top-5'>
                 <div>
                     <div>
+                        <p>{preUser.length}</p>
                         <User></User>
                         <Break></Break>
                         <Details></Details>
