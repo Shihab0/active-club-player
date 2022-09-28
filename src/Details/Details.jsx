@@ -3,7 +3,7 @@ import React from 'react';
 const Details = (props) => {
 
     console.log(props.users);
-    const {users} = props;
+    const {users, time} = props;
 
     let total = 0;
     for(const walk of users){
@@ -16,7 +16,7 @@ const Details = (props) => {
             <h2 className='
             bg-gray-300 p-3 font-bold'>Total Walk: <span className='text-gray-500 mx-2'>{total}Km</span></h2>
             <h2 className='
-            bg-gray-300 p-3 font-bold'>Break time: <span className='text-gray-500 mx-2'>00Min</span></h2>
+            bg-gray-300 p-3 font-bold'>Break time: <span className='text-gray-500 mx-2'>{time}Min</span></h2>
             
 
             

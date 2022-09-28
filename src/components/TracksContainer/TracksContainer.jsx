@@ -11,6 +11,7 @@ import './TracksContainer.css';
 const TracksContainer = () => {
     const [data, setData] = useState([]);
     const [preUser, setPreUser] = useState([]);
+    const [time, setTime] = useState(0)
 
     useEffect(data => {
         fetch('fakeData.json')
@@ -22,6 +23,10 @@ const TracksContainer = () => {
         const newUser = [...preUser, user];
         setPreUser(newUser);
     }
+
+    const breakTime =(e) => {
+        setTime(e.target.innerText);
+    };
 
    
     return (
@@ -43,8 +48,8 @@ const TracksContainer = () => {
                     <div>
                         <p>{preUser.length}</p>
                         <User users= {preUser}></User>
-                        <Break></Break>
-                        <Details users={preUser}></Details>
+                        <Break breakTime={breakTime}></Break>
+                        <Details users={preUser} time={time}></Details>
                     </div>
                 </div>
 
