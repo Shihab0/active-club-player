@@ -3,13 +3,19 @@ import photo from './user.webp'
 
 
 const User = (props) => {
-    
+    const {users} = props;
+
+    let userName = '';
+    users.forEach(user => {
+        userName = user.name;
+    });
+
     return (
        <div>
              <div className='flex gap-3 items-center m-3'>
             <img src={photo} alt="" className='inline rounded-full w-16 ' />
             <div>
-            <p className='font-bold'>Name: </p>
+            <p className='font-bold'>Last Walker Name: {userName} </p>
             <address><small>Pakundia, Kishoreganj</small></address>
             </div>
         </div>

@@ -23,6 +23,7 @@ const TracksContainer = () => {
         setPreUser(newUser);
     }
 
+   
     return (
         <div className='container'>
             <div>
@@ -41,9 +42,9 @@ const TracksContainer = () => {
                 <div>
                     <div>
                         <p>{preUser.length}</p>
-                        <User></User>
+                        <User users= {preUser}></User>
                         <Break></Break>
-                        <Details></Details>
+                        <Details users={preUser}></Details>
                     </div>
                 </div>
 
