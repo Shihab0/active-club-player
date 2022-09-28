@@ -4,10 +4,13 @@ import Details from '../../Details/Details';
 import Break from '../Break/Break';
 import Card from '../Card/Card';
 import User from '../User/User';
-import './TracksContainer.css'
+import './TracksContainer.css';
+
+
 
 const TracksContainer = () => {
     const [data, setData] = useState([]);
+    const [walk, setWalk] = useState(0);
 
     useEffect(data => {
         fetch('fakeData.json')
@@ -15,13 +18,17 @@ const TracksContainer = () => {
         .then(data => setData(data));
     },[]);
 
+    const totalWalk = () => {
+        alert('hi')
+    }
+
     return (
         <div className='container'>
             <div>
             <h3 className='mt-5 mx-5 font-bold'>Select today’s exercise: </h3>
                 <div>
                     <div className='grid grid-cols-3 gap-3 p-5'>
-                       {data.map(user => <Card user={user}></Card>)}
+                       {data.map(user => <Card user={user} totalWalk ={totalWalk}></Card>)}
                     </div>
                 </div>
             
