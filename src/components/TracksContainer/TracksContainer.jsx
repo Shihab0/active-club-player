@@ -1,5 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
+import Details from '../../Details/Details';
+import Break from '../Break/Break';
 import Card from '../Card/Card';
 import User from '../User/User';
 import './TracksContainer.css'
@@ -30,6 +32,8 @@ const TracksContainer = () => {
                 <div>
                     <div>
                         <User></User>
+                        <Break></Break>
+                        <Details></Details>
                     </div>
                 </div>
 
