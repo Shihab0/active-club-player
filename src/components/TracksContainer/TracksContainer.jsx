@@ -34,7 +34,7 @@ const TracksContainer = () => {
             <div>
             <h3 className='mt-5 mx-5 font-bold text-lg'>Trak Your Every Step </h3>
                 <div>
-                    <div className='grid grid-cols-3 gap-3 p-5'>
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-3 p-5'>
                        {data.map(user => <Card user={user}
                        key={user.id} totalWalk ={totalWalk}></Card>)}
                     </div>
