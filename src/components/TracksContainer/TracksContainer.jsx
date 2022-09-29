@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Details from '../../Details/Details';
+import QuestionAns from '../../QuestionAns/QuestionAns';
 import Break from '../Break/Break';
 import Card from '../Card/Card';
 import User from '../User/User';
@@ -38,6 +39,7 @@ const TracksContainer = () => {
                        {data.map(user => <Card user={user}
                        key={user.id} totalWalk ={totalWalk}></Card>)}
                     </div>
+                    <QuestionAns></QuestionAns>
                 </div>
             
             </div>
