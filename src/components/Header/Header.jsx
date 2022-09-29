@@ -1,10 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWalking } from '@fortawesome/free-solid-svg-icons'
 
 
 const Header = () => {
     return (
-        <div>
-            <h1 className='text-purple-900 text-3xl font-bold text-center'>Track Your Steps</h1>
+        <div className='pt-4'>
+            <h1 className='text-purple-900 text-3xl font-bold text-center'><FontAwesomeIcon icon={faWalking}></FontAwesomeIcon> Track Your Steps</h1>
         </div>
     );
 };

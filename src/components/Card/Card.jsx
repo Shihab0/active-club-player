@@ -9,7 +9,7 @@ const Card = (props) => {
                 <div>
                <img src={picture} alt="" className='h-24 w-11/12' />
                 <h2 className='text-lg font-bold'>{name}</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, fugiat!</p>
+                <p>Go Out! Discover yourself in a new place. It's Really  exiting to visit every new country.</p>
                 <p className=' font-bold'>Age: {age}</p>
                 <p className=' font-bold'>Walk: {time} km</p>
                 <button onClick={() => totalWalk(props.user)} className='w-11/12 left-3 bg-emerald-600 px-6 py-2 rounded-lg absolute bottom-0 font-bold text-white'>Add To List</button>

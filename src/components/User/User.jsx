@@ -1,3 +1,5 @@
+import { faLocationPin } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import photo from './user.webp'
 
@@ -5,9 +7,9 @@ import photo from './user.webp'
 const User = (props) => {
     const {users} = props;
 
-    let userName = '';
+    let country = 'Bangladesh';
     users.forEach(user => {
-        userName = user.name;
+        country = user.name;
     });
 
     return (
@@ -15,8 +17,9 @@ const User = (props) => {
              <div className='flex gap-3 items-center m-3'>
             <img src={photo} alt="" className='inline rounded-full w-16 ' />
             <div>
-            <p className='font-bold'>Last Walker Name: {userName} </p>
-            <address><small>Pakundia, Kishoreganj</small></address>
+            <p className='font-bold'>Name: Shihab </p>
+            <p>Last Visited: {country}</p>
+            <address><small><FontAwesomeIcon icon={faLocationPin}></FontAwesomeIcon> Pakundia, Kishoreganj</small></address>
             </div>
         </div>
         <div className='flex justify-between m-2 bg-gray-300 p-3'>
